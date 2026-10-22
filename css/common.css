@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+:root{
+  --main-font : "pretendard", sans-serif;
+  --main-color : #BA000D;
+  --base-color: #F7F3EE;
+}
+
+/* 공통 */
+body{
+  font-family: var(--main-font);
+  font-size: 1.6rem;
+  line-height: 1.35;
+  color: #323232;
+}
+
+#wrap{
+  min-width: 320px;
+}
+
+.inner{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* header */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0 0;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+header .inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+}
+
+header .inner h1 a{
+  display: block;
+  width: 112px;
+  height: 22px;
+}
+
+header nav{
+  margin: 0 auto 0 115px;
+}
+header nav .gnb{
+  display: flex;
+}
+
+header nav .gnb > li{
+  position: relative;
+}
+
+header nav .gnb > li > a{
+  display: block;
+  font-size: 2rem;
+  padding: 14px 20px 14px 20px;
+  font-weight: 600;
+}
+
+header nav .gnb > li::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+header nav .gnb > li:hover::before{
+  opacity: 1;
+}
+
+header nav .gnb .depth2{
+  display: flex;
+  position: absolute;
+  width: 500px;
+  z-index: 99;
+}
+
+header nav .gnb .depth2 li a{
+  display: block;
+  padding: 20px 10px;
+  font-weight: 500;
+  color: #999;
+  transition: all 0.5s;
+}
+
+header nav .gnb .depth2 li:hover a{
+  color: var(--main-color);
+}
+
+header .depth2-bg{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  display: none;
+  z-index: 98;
+}
+
+header .inner .utill{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header .utill .btn-search{
+  width: 30px;
+  height: 30px;
+  border: 0;
+  color: transparent;
+  font-size: 0;
+  background: url(../img/common/search.png) no-repeat center / cover;
+  cursor: pointer;
+}
+
+header .utill .btn-search.active{
+  background-image: url(../img/common/close.png) !important;
+}
+
+header .utill .btn-pin{
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  font-size: 0;
+  background: url(../img/common/pin.png) no-repeat center / cover;
+}
+
+header .utill .btn-mypage{
+  width: 30px;
+  height: 30px;
+  border: 0;
+  color: transparent;
+  font-size: 0;
+  background: url(../img/common/user.png) no-repeat center / cover;
+  cursor: pointer;
+}
+
+header .utill .btn-ham{
+  width: 30px;
+  height: 30px;
+  border: 0;
+  color: transparent;
+  font-size: 0;
+  background: url(../img/common/ham.png) no-repeat center / cover;
+  cursor: pointer;
+  display: none;
+}
+
+header.active{
+  background-color: #fff;
+}
+
+.mgnb-wrap{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: #000;
+  opacity: 0.8;
+  padding: 150px 5%;
+  display: none;
+}
+
+.mgnb-wrap .tit{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mgnb-wrap .mgnb > li{
+  display: block;
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.mgnb-wrap .mgnb > li > a{
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: block;
+  position: relative;
+}
+.mgnb-wrap .mgnb > li > a:not(:last-child)::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/common/add.png) no-repeat center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
+.mgnb-wrap .mgnb > li.active > a::after{
+  background-image: url(../img/common/minus.png);
+}
+
+.mgnb-wrap .mgnb .mdepth2 li{
+  display: block;
+  margin: 10px 30px;
+}
+
+.mgnb-wrap .mgnb .mdepth2 li a{
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.mgnb-wrap .mgnb .mdepth2 li:hover a{
+  color: rgba(255, 255, 255, 1);
+}
+
+header .mgnb-close{
+  width: 40px;
+  height: 40px;
+  border: 0;
+  color: transparent;
+  font-size: 0;
+  background: url(../img/common/close_w.png) no-repeat center;
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  cursor: pointer;
+}
+
+header .search{
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  text-align: center;
+  padding: 40px 0;
+  z-index: 100;
+}
+
+header .search div{
+  display: inline-block;
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+  background-color: #fff;
+  overflow: hidden;
+  width: 30%;
+  min-width: 260px;
+  padding: 0 10px 0 20px;
+}
+
+header .search input[type="text"]{
+  font-family: var(--main-font);
+  background-color: transparent;
+  font-size: 1.8rem;
+  width: calc(100% - 60px);
+  height: 50px;
+}
+
+header .search .search-btn{
+  background: url(../img/common/search_r.png) no-repeat center;
+  font-size: 0;
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media (max-width:1200px){
+  header .utill .btn-search{
+    display: none;
+  }
+
+  header .utill .btn-pin{
+    display: none;
+  }
+  
+  header .utill .btn-ham{
+    display: block;
+  }
+
+  header nav .gnb{
+    display: none;
+  }
+}
+
+@media (max-width:768px){
+  header .utill .btn-mypage{
+    display: none;
+  }
+}
+
+/* footer */
+footer{
+  padding: 100px 0;
+  background-color: var(--main-color);
+}
+
+footer .f-logo{
+  margin-bottom: 30px;
+}
+
+footer .f-link{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .f-link ul{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+footer .f-link ul li a{
+  color: #fff;
+}
+
+footer .f-link .f-icon img{
+  width: 100%;
+}
+
+footer .f-icon li img{
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+footer .f-icon li:hover img{
+  opacity: 1;
+}
+
+footer address{
+  font-family: "pretenderd";
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+footer address span{
+  display: inline-block;
+}
+
+footer .copy p{
+  color: #fff;
+  opacity: 0.4;
+}
+
+@media (max-width:1200px){
+  footer .f-link{
+    font-size: 1.4rem;
+  }
+
+  footer address span{
+    font-size: 1.2rem;
+  }
+
+  footer .copy p{
+    font-size: 1.2rem;
+  }
+
+  footer .f-icon li img{
+    opacity: 1;
+  }
+}
+
+@media (max-width:768px){
+  footer .f-link .f-icon{
+    display: none;
+  }
+}
