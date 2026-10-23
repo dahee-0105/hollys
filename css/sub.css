@@ -888,7 +888,7 @@
   color: #777;
 }
 
-.membership > ul{
+.membership .inner > ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -896,18 +896,18 @@
   margin-bottom: 150px;
 }
 
-.membership > ul > li{
-  width: 500px;
-  padding: 0 100px;
+.membership .inner .top-mem > li{
+  width: calc(100% / 3);
+  padding: 0 50px;
 }
 
-.membership > ul > li:nth-child(2){
+.membership .inner .top-mem > li:nth-child(2){
   border-left: 1px solid #b7b7b7;
   border-right: 1px solid #b7b7b7;
 }
 
 
-.membership > ul > li div{
+.membership .inner > ul > li div{
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -917,18 +917,18 @@
   margin-bottom: 20px;
 }
 
-.membership > ul > li div img{
+.membership .inner > ul > li div img{
   width: 100%;
 }
 
-.membership > ul > li dl dt{
+.membership .inner > ul > li dl dt{
   font-size: 2.6rem;
   font-weight: 600;
   color: var(--main-color);
   margin-bottom: 10px;
 }
 
-.membership > ul > li dl dd{
+.membership .inner > ul > li dl dd{
   font-size: 2rem;
   font-weight: 500;
 }
@@ -1054,18 +1054,17 @@
   margin-bottom: 50px;
 }
 
-.guide ul{
+.guide .inner ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 150px;
 }
 
-.guide ul li{
-  width: 140px;
+.guide .inner ul li{
+  width: calc(100% / 5);
 }
 
-.guide ul li .guide-img{
+.guide .inner ul li .guide-img{
   display: inline-block;
   width: 90px;
   height: 90px;
@@ -1075,18 +1074,18 @@
   margin-bottom: 20px;
 }
 
-.guide ul li .guide-img img{
+.guide .inner ul li .guide-img img{
   width: 100%;
 }
 
-.guide ul li dl dt{
+.guide .inner ul li dl dt{
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--main-color);
   margin-bottom: 10px;
 }
 
-.guide ul li dl dd{
+.guide .inner ul li dl dd{
   font-weight: 500;
 }
 
@@ -1099,20 +1098,20 @@
     font-size: 1.6rem;
   }
 
-  .membership > ul{
+  .membership .inner .top-mem{
     margin-bottom: 100px;
   }
 
-  .membership > ul > li{
+  .membership .inner .top-mem > li{
     width: calc(100% / 3);
-    padding: 0;
+    padding: 30px;
   }
 
-  .membership > ul > li dl dt{
+  .membership .inner > ul > li dl dt{
     font-size: 2rem;
   }
 
-  .membership > ul > li dl dd{
+  .membership .inner > ul > li dl dd{
     font-size: 1.4rem;
   }
 
@@ -1171,15 +1170,15 @@
     font-size: 1.4rem;
   }
 
-  .guide ul{
+  .guid .inner ul{
     gap: 50px;
   }
 
-  .guide ul li{
-    width: 200px;
+  .guide .inner ul li{
+    width: calc(100% / 3);
   }
 
-  .guide ul li dl dd{
+  .guide .inner ul li dl dd{
     font-size: 1.4rem;
   }
 }
@@ -1197,12 +1196,12 @@
     font-size: 1.4rem;
   }
 
-  .membership > ul > li{
+  .membership .inner .top-mem > li{
     width: 100%;
     margin-bottom: 40px;
   }
 
-  .membership > ul > li:nth-child(2){
+  .membership .inner > .top-mem > li:nth-child(2){
     border: 0;
   }
 
@@ -1232,7 +1231,8 @@
     font-size: 2.4rem;
   }
 
-  .guide ul li{
+  .guide .inner ul li{
     width: 100%;
+    margin-bottom: 30px;
   }
 }
