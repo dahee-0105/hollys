@@ -175,6 +175,12 @@ main .btn-more a:hover{
     }
 }
 
+@media (max-width:768px){
+  #main-banner .mb .mb-txt h3{
+    font-size: 5rem;
+  }
+}
+
 
 /* menu */
 #menu{
@@ -273,6 +279,10 @@ main .btn-more a:hover{
 
   #menu .menu p{
     font-size: 1.6rem;
+  }
+
+  #menu .menu-bg{
+    top: 20px;
   }
 }
 
