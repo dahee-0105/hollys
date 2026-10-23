@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-  AOS.init(); 
 
   //데스크탑 depth2
 
