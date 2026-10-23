@@ -177,7 +177,7 @@ main .btn-more a:hover{
 
 @media (max-width:768px){
   #main-banner .mb .mb-txt h3{
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
@@ -292,6 +292,7 @@ main .btn-more a:hover{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 #story > div{
