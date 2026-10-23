@@ -1013,6 +1013,10 @@
   left: 16px;
 }
 
+.earn .crown{
+  overflow-x: hidden;
+}
+
 .earn .crown ul li ul li{
   text-align: left;
   margin-bottom: 20px;
