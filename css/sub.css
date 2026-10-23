@@ -1219,6 +1219,10 @@
     margin-bottom: 30px;
   }
 
+  .earn .crown{
+    overflow-x: hidden;
+  }
+
   .earn .swiper-pagination{
     width: 90%;
     min-width: 375px;
